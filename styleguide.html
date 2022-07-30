@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/unicons/css/line.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <section class="section1">
+            <div class="styleguide">
+                <small class="point upper callout" id="head_tag">Style guide</small>
+            </div>
+            <div class="container capital">
+                <span class="subhead">guidelines</span>
+            </div>
+        </section>
+        <section class="section2">
+            <div class="typography">
+                <h1 class=" capital">aa</h1>
+            </div>
+            <div class="colors">
+                <div class=" color primary">
+                    <span>dominant</span>
+                    <span class="code">#ffd601</span>
+                </div>
+                <div class="color dark">
+                    <span>Complement</span> 
+                    <span class="code"> #142b6f </span>
+                </div>
+                <div class="gray color">
+                    <span>Accent</span>
+                    <span class="code">#e1dee6</span>
+                </div>
+                <div class="light color">
+                    <span>light</span>
+                    <span class="code">#fff</span>
+                </div>
+                <div class="status color">
+                    <span>status</span>
+                    <span class="code">#000</span>
+                </div>
+            </div>
+        </section>
+        <section class="section3">
+            <div class="styleguide">
+                <small class="point upper callout" style="color:rgb(82, 82, 82); font-size: 14pt;">component</small>
+            </div>
+            <div class="container capital">
+                <div class="darkbtn block_button">
+                    <button id="default"><i class=" uil-plus"></i> <span class="tag_button">Default</span></button> 
+                    <button id="pressed"><span>pressed</span></button>
+                    <button id="disable"><span>disable</span></button> 
+                </div>
+                <div class="lightbtn block_button">
+                    <button id="line_default"><i class=" uil-plus"></i> <span class="tag_button">Default</span></button> 
+                    <button id="line_pressed"><span>pressed</span></button>
+                    <button id="line_disable"><span>disable</span></button> 
+                </div>
+           
+
+            </div>
+        </section>
+        <section class="section4">
+
+        </section>
+    </div>
+</body>
+<style>
+    :root{
+        /* color taille icon 32*/
+        --dominant:#FF9500; 
+        --complement:#113E4E;
+        --accent:#c9c9c9;
+        --pressed:#0c313e;
+        --disable:#285666;
+        --shadow:rgba(41, 39, 34, 0.363);
+        --status:rgba(0, 0, 0, 0.575);
+        /* style */
+        --border_size:2.5px;
+        --border_radius_size:15px;
+        --radius_btn:5px;
+        --book:400;
+        --medium:500;
+        --bold:700;
+        --black:800;
+      
+    }
+    body {
+        font-family: 'Montserrat', Helvetica, sans-serif;
+        font-weight: var(--medium);
+    }
+
+    li, a{
+        text-decoration: none;
+        list-style: none;
+    }
+
+    *, *::before, *::after {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        scroll-behavior: auto;
+    }
+    .container{
+        display: block;
+    }
+   
+    .section1{
+        display: block;
+        /* background-color: aqua; */
+        width: 100%;
+        height: 100px;
+        margin: 20px;
+        padding: 10px;
+    }
+    #head_tag{
+        color: var(--complement);
+    }
+    .callout{
+        font-size: 12pt;
+        font-weight: var(--medium);
+        line-height: 20pt;
+        letter-spacing: 0pt;
+    }
+    .subhead{
+        font-size: 24pt;
+        font-weight: var(--medium);
+        line-height: 18pt;
+        letter-spacing: -0,4pt;
+    }
+    .upper{
+        text-transform: uppercase;
+    }
+    .capital{
+        text-transform: capitalize;
+    }
+    .section2{
+        display: grid;
+        grid-template-columns: 300px 1200px;
+        /* background-color: rgb(0, 143, 143); */
+        width: 100%;
+        height: 100px;
+    }
+    
+    .typography{
+        width: 200px;
+        /* background-color: aquamarine; */
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+    .typography h1{
+        font-size: 48pt;
+    }
+    .colors{
+        display: inline-flex;
+    }
+    .color{
+        width: 300px;
+        height: 100%;
+        margin: 0 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: left;
+        padding: 10px;
+        text-transform: capitalize;
+        font-size: 14pt;
+        box-shadow: 0px 0px 10px var(--shadow);
+        border-radius: 5px;
+    }
+    .code{
+        text-transform: uppercase;
+    }
+    .primary{
+       background-color: var(--dominant);
+       color: black;
+    }
+    .dark{
+        background-color:var(--complement);
+        color: white;
+    }
+    .gray{
+        background-color: var(--accent);
+    }
+    .light{
+        background-color: white;
+        color: var(--complement);
+    }
+    .status{
+        background-color: black;
+        color: white;
+    }
+    .section3{
+        display: block;
+        /* background-color: aqua; */
+        width: 100%;
+        height: 100px;
+        margin: 50px 0 20px 0;
+        padding: 20px;
+    }
+  
+     .darkbtn, .lightbtn{
+        margin: 20px 30px;
+    }
+    .block_button button{
+        height: 60px;
+        width: 300px;
+        left: 427px;
+        top: 641px;
+        border-radius: 32px;
+
+        /* height: 40px;
+        width: 10%; */
+        margin: 20px 10px 0 0;
+        /* border-radius: 5px; */
+        text-transform: capitalize;
+        color: white;
+        font-weight: var(--bold);
+    }
+    #default{
+        background: var(--complement);
+    }
+    #pressed{
+        background: var(--pressed);
+    }
+    #disable{
+        background: var(--disable);
+    }
+    #line_default{
+        border: 2px solid var(--complement);
+        color: var(--complement);
+    }
+    #line_pressed{
+        border: 2px solid var(--pressed);
+        color: white;
+        background: var(--disable);
+    }
+    #line_disable{
+        border: 2px solid var(--disable);
+        color: white;
+        background: var(--accent);
+    }
+</style>
+</html>
